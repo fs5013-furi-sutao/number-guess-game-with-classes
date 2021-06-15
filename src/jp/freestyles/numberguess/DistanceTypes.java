@@ -24,7 +24,6 @@ public enum DistanceTypes {
 
             if (distance < type.distance) {
                 return type;
-
             }
         }
         return OUT_OF_DISTANCE;
@@ -39,5 +38,4 @@ public enum DistanceTypes {
         }
         System.out.println(MESSAGE_FOR_SMALLER_ANSWER);
     }
-
 }
