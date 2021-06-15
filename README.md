@@ -7,7 +7,7 @@
 39. 作成課題 ⭐ 数当てゲーム | Java Bootcamp:  
 https://fs5013-furi-sutao.github.io/java-bootcamp/entry/39-number-guess-game
 
-### クラス
+### 作成したクラスの説明
 
 以下のクラスを作成しています
 
