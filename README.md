@@ -34,7 +34,7 @@ https://fs5013-furi-sutao.github.io/java-bootcamp/entry/39-number-guess-game
 
 #### Number.java
 
-数字をあらわすクラス
+数字の並びをあらわすクラス
 
 #### ChallengeCounter.java
 
