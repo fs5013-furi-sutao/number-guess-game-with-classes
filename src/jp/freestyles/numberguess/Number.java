@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * 数字をあらわすクラス
+ * 数字の並びをあらわすクラス
  */
 public class Number {
 
