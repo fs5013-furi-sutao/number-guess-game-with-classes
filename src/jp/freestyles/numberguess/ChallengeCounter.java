@@ -5,7 +5,7 @@ package jp.freestyles.numberguess;
  */
 public class ChallengeCounter {
 
-    private static final int MAX_COUNT_OF_CHALLENGE = Config.MAX_COUNT_OF_CHALLENGE;
+    private static final int NUMBER_OF_MAX_TIMES_TO_ANSWER = Config.NUMBER_OF_MAX_TIMES_TO_ANSWER;
 
     private int count;
 
@@ -18,11 +18,12 @@ public class ChallengeCounter {
     }
 
     public boolean isOver() {
-        return this.count > MAX_COUNT_OF_CHALLENGE;
+        return this.count > NUMBER_OF_MAX_TIMES_TO_ANSWER;
     }
 
-    public void showNumberOfTimesToAnswer() {
-        System.out.format("答えられるのは %d 回までだよ。 %n", MAX_COUNT_OF_CHALLENGE);
+    public void showNumberOfMaxTimesToAnswer() {
+        System.out.format("答えられるのは %d 回までだよ。 %n",
+                NUMBER_OF_MAX_TIMES_TO_ANSWER);
     }
 
     public void showCounter() {

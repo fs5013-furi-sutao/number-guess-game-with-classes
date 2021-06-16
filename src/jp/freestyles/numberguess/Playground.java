@@ -75,7 +75,7 @@ public class Playground {
     private void showStartMessage() {
         System.out.println(GAME_START_MESSAGE);
         System.out.println();
-        this.challengeCounter.showNumberOfTimesToAnswer();
+        this.challengeCounter.showNumberOfMaxTimesToAnswer();
         System.out.println();
     }
 

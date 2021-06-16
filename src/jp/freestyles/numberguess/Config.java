@@ -19,5 +19,5 @@ public class Config {
     public static final int DIGIT = 3;
 
     // 許容される数当ての挑戦回数
-    public static final int MAX_COUNT_OF_CHALLENGE = 5;
+    public static final int NUMBER_OF_MAX_TIMES_TO_ANSWER = 5;
 }
