@@ -6,6 +6,8 @@ package jp.freestyles.numberguess;
 public class ChallengeCounter {
 
     private static final int NUMBER_OF_MAX_TIMES_TO_ANSWER = Config.NUMBER_OF_MAX_TIMES_TO_ANSWER;
+    private static final String MESSAGE_FOR_COUNTER = Config.MESSAGE_FOR_COUNTER;
+    private static final String MESSAGE_FOR_NUMBER_OF_MAX_TIMES_TO_ANSWER = Config.MESSAGE_FOR_NUMBER_OF_MAX_TIMES_TO_ANSWER;
 
     private int count;
 
@@ -22,12 +24,12 @@ public class ChallengeCounter {
     }
 
     public void showNumberOfMaxTimesToAnswer() {
-        System.out.format("答えられるのは %d 回までだよ。 %n",
+        System.out.format(MESSAGE_FOR_NUMBER_OF_MAX_TIMES_TO_ANSWER,
                 NUMBER_OF_MAX_TIMES_TO_ANSWER);
     }
 
     public void showCounter() {
-        System.out.format("%d 回目: ", this.count);
+        System.out.format(MESSAGE_FOR_COUNTER, this.count);
     }
 
     public int getCurrentValue() {
