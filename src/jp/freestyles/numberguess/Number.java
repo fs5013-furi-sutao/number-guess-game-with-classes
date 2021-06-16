@@ -10,7 +10,7 @@ import java.util.Random;
 public class Number {
 
     private static final int RANGE_IN_ONE_DIGIT = 10;
-    private static final Random rand = new Random();
+    private static final Random RANDOM = new Random();
 
     private final int DIGIT;
     private List<Integer> numberSequence;
@@ -35,7 +35,7 @@ public class Number {
     }
 
     private int getRandomNum() {
-        return rand.nextInt(RANGE_IN_ONE_DIGIT);
+        return RANDOM.nextInt(RANGE_IN_ONE_DIGIT);
     }
 
     public int getValue() {
