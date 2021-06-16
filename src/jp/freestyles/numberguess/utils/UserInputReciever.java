@@ -1,4 +1,4 @@
-package jp.freestyles.numberguess;
+package jp.freestyles.numberguess.utils;
 
 import java.util.Scanner;
 

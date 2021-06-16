@@ -1,4 +1,4 @@
-package jp.freestyles.numberguess;
+package jp.freestyles.numberguess.domain;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,7 @@ import java.util.Random;
 /**
  * 数字の並びをあらわすクラス
  */
-public class Number {
+public class NumberSequence {
 
     private static final int RANGE_IN_ONE_DIGIT = 10;
     private static final Random RANDOM = new Random();
@@ -15,7 +15,7 @@ public class Number {
     private final int DIGIT;
     private List<Integer> numberSequence;
 
-    public Number(int digit) {
+    public NumberSequence(int digit) {
         this.DIGIT = digit;
         initNumberSequence();
     }
@@ -60,15 +60,18 @@ public class Number {
         }
     }
 
-    public static boolean isCorrect(Number correct, Number currentUserAnswer) {
+    public static boolean isCorrect(NumberSequence correct,
+            NumberSequence currentUserAnswer) {
         return correct.getValue() == currentUserAnswer.getValue();
     }
 
-    public static int getDiff(Number correct, Number currentUserAnswer) {
+    public static int getDiff(NumberSequence correct,
+            NumberSequence currentUserAnswer) {
         return Math.abs(correct.getValue() - currentUserAnswer.getValue());
     }
 
-    public static boolean getIsBig(Number correct, Number currentUserAnswer) {
+    public static boolean getIsBig(NumberSequence correct,
+            NumberSequence currentUserAnswer) {
         return correct.getValue() < currentUserAnswer.getValue();
     }
 }

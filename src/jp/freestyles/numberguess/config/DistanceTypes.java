@@ -1,4 +1,4 @@
-package jp.freestyles.numberguess;
+package jp.freestyles.numberguess.config;
 
 /**
  * 値同士の距離を定義する列挙子

@@ -1,4 +1,6 @@
-package jp.freestyles.numberguess;
+package jp.freestyles.numberguess.domain;
+
+import jp.freestyles.numberguess.config.Config;
 
 /**
  * トライ回数をあらわすクラス

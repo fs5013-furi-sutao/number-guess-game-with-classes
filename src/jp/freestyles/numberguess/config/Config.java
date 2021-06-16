@@ -1,4 +1,4 @@
-package jp.freestyles.numberguess;
+package jp.freestyles.numberguess.config;
 
 /**
  * 設定値を決めるクラス

@@ -7,47 +7,68 @@
 39. 作成課題 ⭐ 数当てゲーム | Java Bootcamp:  
 https://fs5013-furi-sutao.github.io/java-bootcamp/entry/39-number-guess-game
 
+### パッケージ構成
+
+#### メインパッケージ直下
+
+> 1. App.java
+> 2. Playground.java
+
+#### domain パッケージ
+
+プログラムの主となる興味対象をクラスとして集めたパッケージ
+
+> 3. NumberSequence.java
+> 4. ChallengeCounter.java
+> 5. Judger.java
+
+#### utils パッケージ
+
+共通処理に関わるクラスを集めたパッケージ
+
+> 6. UserInputReciever.java
+
+#### config パッケージ
+
+設定に関わるクラスを集めたパッケージ
+
+> 7. Config.java
+> 8. DistanceTypes.java
+
+<br />
+
 ### 作成したクラスの説明
 
-以下のクラスを作成しています
+#### 1. App.java
 
-1. App.java
-2. Playground.java
-3. Config.java
-4. Number.java
-5. ChallengeCounter.java
-6. Judger.java
-7. UserInputReciever.java
-8. DistanceTypes.java
+> 数当てゲームの起点となるクラスです
 
-#### App.java
+#### 2. Playground.java
 
-数当てゲームの起点となるクラスです
+> 数当てゲームを繰り広げる場所をあらわすクラス
 
-#### Playground.java
+#### 3. NumberSequence.java
 
-数当てゲームを繰り広げる場所をあらわすクラス
+> 数字の並びをあらわすクラス
 
-#### Config.java
+#### 4. ChallengeCounter.java
 
-設定値を決めるクラス
+> トライ回数をあらわす
 
-#### Number.java
+#### 5. Judger.java
 
-数字の並びをあらわすクラス
+> 正解とユーザの入力した数字を比較・判定するクラス
 
-#### ChallengeCounter.java
+#### 6. UserInputReciever.java
 
-トライ回数をあらわすクラス
+> ユーザの入力受付けをあらわすクラス
 
-#### Judger.java
+#### 7. Config.java
 
-正解とユーザの入力した数字を比較・判定するクラス
+> 設定値を決めるクラス
 
-#### UserInputReciever.java
+#### 8. DistanceTypes.java
 
-ユーザの入力受付けをあらわすクラス
+> 値同士の距離を定義する列挙子
 
-#### DistanceTypes.java
-
-値同士の距離を定義する列挙子
+<br />

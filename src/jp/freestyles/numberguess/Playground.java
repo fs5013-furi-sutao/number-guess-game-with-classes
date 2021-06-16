@@ -1,5 +1,11 @@
 package jp.freestyles.numberguess;
 
+import jp.freestyles.numberguess.config.Config;
+import jp.freestyles.numberguess.domain.ChallengeCounter;
+import jp.freestyles.numberguess.domain.Judger;
+import jp.freestyles.numberguess.domain.NumberSequence;
+import jp.freestyles.numberguess.utils.UserInputReciever;
+
 /**
  * 数当てゲームを繰り広げる場所をあらわすクラス
  */
@@ -13,14 +19,14 @@ public class Playground {
 
     private static final int DIGIT = Config.DIGIT;
 
-    private Number correct;
-    private Number currentUserAnswer;
+    private NumberSequence correct;
+    private NumberSequence currentUserAnswer;
     private Judger judger;
     private ChallengeCounter challengeCounter;
 
     public Playground() {
-        this.correct = new Number(DIGIT);
-        this.currentUserAnswer = new Number(DIGIT);
+        this.correct = new NumberSequence(DIGIT);
+        this.currentUserAnswer = new NumberSequence(DIGIT);
         this.challengeCounter = new ChallengeCounter();
     }
 
