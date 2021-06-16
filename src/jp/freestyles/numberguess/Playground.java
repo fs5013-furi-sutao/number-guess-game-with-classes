@@ -15,6 +15,7 @@ public class Playground {
 
     private Number correct;
     private Number currentUserAnswer;
+    private Judger judger;
     private ChallengeCounter challengeCounter;
 
     public Playground() {
@@ -32,20 +33,21 @@ public class Playground {
         while (!this.challengeCounter.isOver()) {
 
             this.challengeCounter.showCounter();
-
             recieveUserInput();
-
-            Judger judger = new Judger(this.correct, this.currentUserAnswer);
+            initJudger();
 
             if (judger.isCorrect()) {
                 break;
             }
 
             judger.showResult();
-
             this.challengeCounter.countUp();
         }
         showFinalResult();
+    }
+
+    private void initJudger() {
+        this.judger = new Judger(this.correct, this.currentUserAnswer);
     }
 
     private void showFinalResult() {
