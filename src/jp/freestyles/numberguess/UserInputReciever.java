@@ -13,7 +13,7 @@ public class UserInputReciever {
         STDIN = new Scanner(System.in);
     }
 
-    public static int recieveNumbers() {
+    public static int recieveNumberSequence() {
 
         String inputStr = recieveStr();
         int inputInteger = 0;
@@ -22,14 +22,14 @@ public class UserInputReciever {
 
         } catch (NumberFormatException e) {
             showMessageOfInvalidInputForNumber();
-            inputInteger = recieveNumbers();
+            inputInteger = recieveNumberSequence();
         }
         return inputInteger;
     }
 
     public static int recieveNumbersIn(int digit) {
 
-        int recievedNumber = recieveNumbers();
+        int recievedNumber = recieveNumberSequence();
         if (isOverDigitRange(recievedNumber, digit)) {
             showMessageOfInvalidRequiredDigit(digit);
             recieveNumbersIn(digit);
