@@ -13,6 +13,7 @@ public class UserInputReciever {
         STDIN = new Scanner(System.in);
     }
 
+    // TODO: マイナス値の入力に対するバリデーションが不足している
     public static int recieveNumberSequence(int digit) {
 
         String inputStr = recieveStr();
