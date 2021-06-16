@@ -6,11 +6,11 @@ package jp.freestyles.numberguess;
 public class Playground {
 
     private static final boolean IS_DEBUG_MODE = Config.IS_DEBUG_MODE;
-    
+
     private static final String GAME_START_MESSAGE = Config.GAME_START_MESSAGE;
     private static final String MESSAGE_WHEN_HIT = Config.MESSAGE_WHEN_HIT;
     private static final String MESSAGE_WHEN_NOT_HIT = Config.MESSAGE_WHEN_NOT_HIT;
-    
+
     private static final int DIGIT = Config.DIGIT;
 
     private Number correct;
@@ -80,7 +80,7 @@ public class Playground {
     }
 
     private void recieveUserInput() {
-        int userInputNum = UserInputReciever.recieveNumbersIn(DIGIT);
+        int userInputNum = UserInputReciever.recieveNumberSequence(DIGIT);
         this.currentUserAnswer.setInteger(userInputNum);
     }
 

@@ -13,36 +13,39 @@ public class UserInputReciever {
         STDIN = new Scanner(System.in);
     }
 
-    public static int recieveNumberSequence() {
+    public static int recieveNumberSequence(int digit) {
 
         String inputStr = recieveStr();
-        int inputInteger = 0;
-        try {
-            inputInteger = Integer.parseInt(inputStr);
 
-        } catch (NumberFormatException e) {
+        if (isNumber(inputStr)) {
+            if (isOverDigitRange(inputStr, digit)) {
+                showMessageOfInvalidRequiredDigit(digit);
+                return recieveNumberSequence(digit);
+            }
+            return Integer.parseInt(inputStr);
+        } else {
             showMessageOfInvalidInputForNumber();
-            inputInteger = recieveNumberSequence();
         }
-        return inputInteger;
+
+        return recieveNumberSequence(digit);
     }
 
-    public static int recieveNumbersIn(int digit) {
+    private static boolean isNumber(String inputStr) {
+        try {
+            Integer.parseInt(inputStr);
 
-        int recievedNumber = recieveNumberSequence();
-        if (isOverDigitRange(recievedNumber, digit)) {
-            showMessageOfInvalidRequiredDigit(digit);
-            recieveNumbersIn(digit);
+        } catch (NumberFormatException e) {
+            return false;
         }
-        return recievedNumber;
+        return true;
     }
 
     private static void showMessageOfInvalidRequiredDigit(int digit) {
         System.out.format("%d 桁の数字で入力してください %n", digit);
     }
 
-    private static boolean isOverDigitRange(int recievedNumber, int digit) {
-        return String.valueOf(recievedNumber).length() > digit;
+    private static boolean isOverDigitRange(String inputStr, int digit) {
+        return inputStr.length() > digit;
     }
 
     public static String recieveStr() {
