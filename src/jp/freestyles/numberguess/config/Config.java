@@ -17,6 +17,7 @@ public class Config {
     public static final String MESSAGE_FOR_BIGGER_ANSWER = "小さい数字だよ";
     public static final String MESSAGE_FOR_SMALLER_ANSWER = "大きい数字だよ";
     // use in ChallengeCounter.java
+    public static final int COUNT_AT_STARTUP = 1;
     public static final String MESSAGE_FOR_COUNTER = "%d 回目: ";
     public static final String MESSAGE_FOR_NUMBER_OF_MAX_TIMES_TO_ANSWER = "答えられるのは %d 回までだよ。 %n";
 

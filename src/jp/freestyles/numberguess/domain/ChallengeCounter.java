@@ -7,6 +7,7 @@ import jp.freestyles.numberguess.config.Config;
  */
 public class ChallengeCounter {
 
+    private static final int COUNT_AT_STARTUP = Config.COUNT_AT_STARTUP;
     private static final int NUMBER_OF_MAX_TIMES_TO_ANSWER = Config.NUMBER_OF_MAX_TIMES_TO_ANSWER;
     private static final String MESSAGE_FOR_COUNTER = Config.MESSAGE_FOR_COUNTER;
     private static final String MESSAGE_FOR_NUMBER_OF_MAX_TIMES_TO_ANSWER = Config.MESSAGE_FOR_NUMBER_OF_MAX_TIMES_TO_ANSWER;
@@ -14,7 +15,7 @@ public class ChallengeCounter {
     private int count;
 
     public ChallengeCounter() {
-        this.count = 1;
+        this.count = COUNT_AT_STARTUP;
     }
 
     public void countUp() {
