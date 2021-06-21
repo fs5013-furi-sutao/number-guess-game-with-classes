@@ -24,10 +24,8 @@ public class UserInputReciever {
                 return recieveNumberSequence(digit);
             }
             return Integer.parseInt(inputStr);
-        } else {
-            showMessageOfInvalidInputForNumber();
         }
-
+        showMessageOfInvalidInputForNumber();
         return recieveNumberSequence(digit);
     }
 
